@@ -10,7 +10,7 @@
         <img slot='item_icon_active' src='../../assets/img/TabBar/category_red.svg'>
         <div slot='item_text'>分类</div>
         </tabbaritem>
-        <tabbaritem path='/car' activecolor="blue"> 
+        <tabbaritem path='/car' activecolor="pink"> 
         <img slot='item_icon' src='../../assets/img/TabBar/car.svg'>
         <img slot='item_icon_active' src='../../assets/img/TabBar/car_red.svg'>
         <div slot='item_text'>购物车</div>
