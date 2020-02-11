@@ -46,12 +46,12 @@
 .tab_bar_items{
   flex: 1;
   text-align: center;
-  height: 49px;
-  font-size: 14px;
+  height: 55px;
+  /* font-size: 14px; */
 }
 .tab_bar_items img{
-    height: 18px;
-    width: 18px;
+    height: 50px;
+    width: 66px;
     margin-top:3px;
 }
 
