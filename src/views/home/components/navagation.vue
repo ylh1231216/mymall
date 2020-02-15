@@ -26,6 +26,9 @@
         text-align: center;
         font-size: 1.5em;
         /* padding:2px 0px */
+        position: sticky;
+        top: 0px;
+        z-index: 10;
         
     }
     .left{

@@ -48,11 +48,11 @@ export default {
           },
           {
               id:2,
-              src:'////m.360buyimg.com/mobilecms/s700x280_jfs/t1/87358/35/11810/200414/5e3d2ec5E288c23ea/80618e87aaeb1058.jpg!cr_1125x445_0_171!q70.jpg.dpg'
+              src:'//m.360buyimg.com/mobilecms/s700x280_jfs/t1/87358/35/11810/200414/5e3d2ec5E288c23ea/80618e87aaeb1058.jpg!cr_1125x445_0_171!q70.jpg.dpg'
           },
           {
               id:3,
-              src:'////m.360buyimg.com/mobilecms/s700x280_jfs/t1/104317/14/11785/97705/5e3d1762Eb40e9f56/8311074b2ae7c32e.jpg!cr_1125x445_0_171!q70.jpg.dpg'
+              src:'//m.360buyimg.com/mobilecms/s700x280_jfs/t1/104317/14/11785/97705/5e3d1762Eb40e9f56/8311074b2ae7c32e.jpg!cr_1125x445_0_171!q70.jpg.dpg'
           },
           {
               id:4,
