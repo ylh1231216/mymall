@@ -1,0 +1,119 @@
+<template>
+ <div class="detail">
+   <h1>商品编码：{{pid}}</h1>
+   <p>商品名称:{{imgsrc[pitid].text}}</p>
+   <p>商品价格:{{imgsrc[pitid].price}}</p>
+   <img :src="imgsrc[pitid].src" alt="">
+   <div class='detailbtn'>
+   <button  @click="back">返回</button>
+   <button  @click="additem">加入购物车</button>
+   </div>
+ </div>
+</template>
+
+<script> 
+ export default {
+   name: 'detail',
+   created() {
+     this.$emit('tabnotshow',false)
+    //  console.log('发射notshow')
+   },
+   destroyed() {
+    //  console.log('我毁了')
+     this.$emit('tabshow',true)
+
+   },
+   data(){
+     return {
+       proid:0,
+       imgsrc:[
+        {
+        id:1,
+        text:'GILLIVO嘉里奥2020简约马鞍半圆包真皮简约复古斜挎包气质潮流单肩手提女包 拼蓝',
+        price:847,
+        list:'新品',
+        src:'//img10.360buyimg.com/mobilecms/s372x372_jfs/t1/110067/10/6082/167638/5e478513E42c0f1ca/10c42cf367032303.jpg'
+        },
+        {
+        id:2,
+        text:'MANRYAN曼瑞 罗马「一生一世」婚戒情侣铂金戒指钻石白金对戒结婚钻戒 【18K玫瑰金一对】支持邮寄海外，其他尺寸可定制',
+        price:4928,
+        list:'满减',
+        src:'//img10.360buyimg.com/mobilecms/s372x372_jfs/t1/30997/29/5798/188797/5c887d13Eb854b1e5/6ab74267094d2a71.jpg'
+        },
+        {
+        id:3,
+        text:'周百福 钻戒/白18K金钻石戒指女铂金求婚结婚戒指订婚裸钻定制钻戒1克拉/玫瑰之心 【限量特价】10分I-J色/SI 30分效果',
+        price:1399,
+        list:'新品',
+        src:'//img10.360buyimg.com/mobilecms/s372x372_jfs/t1/109224/24/6177/158967/5e4748faEfdbdf2d5/d2c8740f1b9e1edb.jpg'
+        },
+        {
+        id:4,
+        text:'【专柜正品 快递秒送】迪奥（Dior）香水女士真我花漾甜心小姐漫舞女士香氛淡香 香水小样套装 5毫升 （红色) 小样 三件套',
+        price:99,
+        list:'活动',
+        src:'//img13.360buyimg.com/mobilecms/s372x372_jfs/t1/108142/15/3486/125546/5e11bdc4E5f2a0a6f/bd203575ee9bebbc.jpg'
+        },
+        {
+        id:5,
+        text:'任天堂（Nintendo）Switch 游戏机健身环大冒险NS掌上游戏机便携任天堂switch游戏卡 限定版精灵宝可梦 妖精口袋去吧皮卡丘（含精灵球）',
+        price:499,
+        list:'新品',
+        src:'//img12.360buyimg.com/mobilecms/s372x372_jfs/t1/82472/36/1062/94755/5cf4806cEc74325bf/af941f4865d0432a.jpg'
+        },
+        {
+        id:6,
+        text:'三只松鼠 坚果礼盒 休闲零食干果大礼包红黄款 每日坚果混合组合 春节年货礼盒 坚果礼1373g(7袋)',
+        price:158,
+        list:'满减',
+        src:'//img14.360buyimg.com/mobilecms/s372x372_jfs/t1/66321/6/13972/209885/5db6b238E3b317d2e/ba46cddd9e914730.png'
+        }
+      ]
+    
+     }
+   },
+   computed: {
+     pid(){
+       return this.$route.params.iid
+     },
+     pitid(){
+       return (this.$route.params.iid-1)%6
+     }
+   },
+   methods: {
+     back(){
+       this.$router.go(-1)
+      //  console.log('发射show')
+     },
+     additem(){
+       console.log('加入购物车')
+     }
+   },
+   components: {
+
+   }
+ }
+</script>
+
+<style scoped>
+.detail{
+  background-color:yellowgreen; 
+  position: fixed
+}
+.detailbtn{
+  position:fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.detailbtn button{
+  width: 50%;
+  height: 40px;
+}
+img{
+  width: 90%;
+  margin:  5%;
+}
+ 
+</style>

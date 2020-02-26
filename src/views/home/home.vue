@@ -35,10 +35,10 @@ import backtop from './components/backtop'
      backtop
    },
    methods: {
-     change(){
-       this.flag =true
-       console.log('e')
-     },
+    //  change(){
+    //    this.flag =true
+    //    console.log('e')
+    //  },
      getScroll(){
       if (window.scrollY>0){
       this.flag =true
@@ -48,11 +48,12 @@ import backtop from './components/backtop'
       }
      }
     },
-    mounted() {
+    activated() {
+    
         window.addEventListener('scroll', this.getScroll);
         // console.log('监听事件')
     },
-    destroyed(){
+    deactivated(){
         window.removeEventListener('scroll', this.getScroll);
         // console.log('移除事件')
     },

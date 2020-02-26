@@ -63,7 +63,10 @@ export default {
           src2:'//m.360buyimg.com/mobilecms/s250x200_jfs/t1/90168/28/11657/81077/5e38f2f1E40941e23/2c09c4d657887b06.jpg!q70.jpg.dpg',
           src3:'//m.360buyimg.com/mobilecms/s250x200_jfs/t1/100968/12/11540/79833/5e38f336Eab7b4602/6bcd12cc44305613.jpg!q70.jpg.dpg'
       }
+  
+  
   },
+
 }
 </script>
 

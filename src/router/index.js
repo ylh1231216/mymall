@@ -9,6 +9,9 @@ const categroy = () =>
     import ('../views/categroy/categroy.vue')
 const my = () =>
     import ('../views/my/my.vue')
+const detail = () =>
+    import ('../views/detail/detail.vue')
+
 Vue.use(VueRouter)
 
 const routes = [{
@@ -31,6 +34,10 @@ const routes = [{
     {
         path: '/my',
         component: my
+    },
+    {
+        path: '/detail/:iid',
+        component: detail
     }
 ]
 
@@ -39,4 +46,12 @@ const router = new VueRouter({
     mode: 'history'
 })
 
+
+// router.beforeEach((to, from, next) => {
+//     console.log('到：')
+//     console.log(to)
+//     console.log('来自：')
+//     console.log(from)
+//     next()
+// })
 export default router

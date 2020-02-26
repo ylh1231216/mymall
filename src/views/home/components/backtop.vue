@@ -8,11 +8,12 @@
 <style scoped>
    .backtop{
     position: fixed;
-    bottom: 50px;
+    bottom: 60px;
     font-size: 2em;
-    background:lightcyan;
-    right: 0px;
-    opacity: 0.5
+    background:lightcoral;
+    right: 10px;
+    opacity: 1;
+    border-radius: 50%;
    }
 
 </style>
@@ -37,10 +38,10 @@ export default {
       var t =setInterval(() => {
          if(window.scrollY==0){
           clearInterval(t);
-          console.log('清除定时器')
+          // console.log('清除定时器')
         }  
-          window.scrollBy(0,-15)
-          console.log(window.scrollY)
+          window.scrollBy(0,Math.min(-window.scrollY/40,-150))
+          // console.log(window.scrollY)
       }, 0.5);
     }
   }
