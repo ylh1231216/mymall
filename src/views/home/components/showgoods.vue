@@ -2,14 +2,14 @@
   <div class='showgoods'>
     <div class='headline'><img :src="src1"></div>
     <div class='content'>
-    <div class='contentloop' v-for="item in imgsrc" :key='item.id' @click="todetail(item.id)">
-      <a>
+    <div class='contentloop' v-for="item in imgsrc" :key='item.id'>
+      <a @click="todetail(item.id)">
       <img :src="item.src" >
       <p>{{item.text}}</p>
       <span>{{'￥'+item.price}}</span>
       <span id="sp">{{item.list}}</span>
-      <i class='el-icon-shopping-cart-2 sz'></i>
       </a>
+      <i class='el-icon-shopping-cart-2 sz' @click="additem(item.id)"></i>
     </div>
     <!-- <input type="button" value="更多推荐" class="bt" @click="add"> -->
     </div>
@@ -123,14 +123,18 @@ export default {
            text:this.imgsrc[this.count].text,
            price:this.imgsrc[this.count].price,
            list:this.imgsrc[this.count].list,
-           src:this.imgsrc[this.count].src
+           src:this.imgsrc[this.count].src,
+           count: 1,
+           stats: false
          },
          {
            id:this.imgsrc.length+2,
            text:this.imgsrc[this.count+1].text,
            price:this.imgsrc[this.count+1].price,
            list:this.imgsrc[this.count+1].list,
-           src:this.imgsrc[this.count+1].src
+           src:this.imgsrc[this.count+1].src,
+           count: 1,
+           stats: false
          }
        )
        this.count =this.count+2
@@ -140,8 +144,21 @@ export default {
       }     
      },
      todetail(iid){
-       console.log(iid)
+      //  console.log(iid)
        this.$router.push('/detail/'+iid)
+     },
+     additem(iid){
+      //  console.log(iid)
+        var iteminfo ={
+        id:0+iid,
+        text: this.imgsrc[iid-1].text,
+        price: this.imgsrc[iid-1].price,
+        list: this.imgsrc[iid-1].list,
+        src: this.imgsrc[iid-1].src,
+        count:this.imgsrc[iid-1].count,
+        stats: this.imgsrc[iid-1].stats
+       }
+       this.$store.commit('additem',iteminfo)
      }
     
    }

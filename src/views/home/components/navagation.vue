@@ -1,7 +1,7 @@
 <template>
   <div class='nvg'>
       <span class='left'>
-         <i class="el-icon-s-operation"></i>
+         <i class="el-icon-s-operation" @click="routerto('categroy')"></i>
       </span>
       <span class='center'>
           <el-input placeholder="请输入内容" v-model="input1">
@@ -10,7 +10,7 @@
           </el-input>
       </span>
       <span class='right'>
-          <i class="el-icon-user"></i>
+          <i class="el-icon-user"  @click="routerto('my')"></i>
       </span>
   </div>
   
@@ -54,6 +54,11 @@ export default {
   data() {
       return {
           input1:'商品搜索'
+      }
+  },
+  methods: {
+      routerto(a){
+          this.$router.push('./'+a)
       }
   },
 }

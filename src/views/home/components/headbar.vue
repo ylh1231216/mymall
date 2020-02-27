@@ -1,6 +1,6 @@
 <template>
   <div class='headbar'>
-     
+     vue-demo:京东商城
   </div>
   
 </template>
@@ -9,7 +9,10 @@
    .headbar{
      text-align: center;
      height: 40px;
-     background: red
+     background: linear-gradient(#e66465, #9198e5); 
+     line-height: 40px;
+     font-weight: bold;
+   
    }
 
 </style>

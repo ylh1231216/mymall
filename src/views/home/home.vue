@@ -6,6 +6,7 @@
   <menul></menul>
   <showgoods></showgoods>
   <backtop :showicon='flag'></backtop>
+  <tabbatmenu></tabbatmenu>
  </div>
 </template>
 
@@ -16,7 +17,7 @@ import lv from './components/listview'
 import menul from './components/menu'
 import showgoods from './components/showgoods'
 import backtop from './components/backtop'
-
+import tabbatmenu from '../../components/content/tabbatmenu'
 
 
  export default {
@@ -32,7 +33,8 @@ import backtop from './components/backtop'
      lv,
      menul,
      showgoods,
-     backtop
+     backtop,
+     tabbatmenu
    },
    methods: {
     //  change(){

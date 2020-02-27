@@ -1,14 +1,14 @@
 <template>
- <div class="cargood" :style="{height:iheight+'px'}">
+ <div class="cargood">
     <div v-for="(item,index) in cargood" :key="index">
         <el-checkbox :value="item.stats" class="ii" @change='change(index)'></el-checkbox>
         <img :src='item.src'>
-        <span>
+        <span class="ss">
         <p>{{item.id+':'+item.text}}</p>
         <b>{{'￥'+item.price}}</b>
         <div class="iii">
         <button @click="dec(index)">-</button>{{item.count}}<button @click="add(index)">+</button>
-        <span>删除</span>
+        <span @click="deleteitem(index)">删除</span>
         </div>
         </span>
     </div>
@@ -27,7 +27,7 @@
            return this.$store.state.cargood
            },
         iheight(){
-          return iheight-iheight/4
+          return iheight-iheight/8
         }
    },
    data () {
@@ -45,6 +45,9 @@
       change(index){
         this.$store.commit('changesinglestau',{index:index})
         // console.log('changesinglestau')
+      },
+      deleteitem(index){
+        this.$store.commit('delete',{index:index})
       }
    },
    components: {
@@ -55,8 +58,10 @@
 
 <style scoped>
 .cargood{
-    height: 560px;
-    overflow: scroll;
+    /* height: 560px; */
+    /* width: 100%; */
+    /* overflow: scroll; */
+    padding-bottom: 100px;
 }
 .cargood>div{
   display: flex;
@@ -79,6 +84,9 @@
 
 .ii{
     transform: translateY(50px)
+}
+.ss{
+width: 100%;
 }
 .iii{
   float:right;

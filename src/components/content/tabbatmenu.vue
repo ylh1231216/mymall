@@ -14,7 +14,7 @@
         1
         </tabbaritem>
         <tabbaritem path='/my'> 
-        <img slot='item_icon_active' src='../../assets/img/TabBar/my.svg'>
+        <img slot='item_icon_active' src='../../assets/img/TabBar/my_red.png'>
         <img slot='item_icon' src='https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/68400/36/12368/3153/5d9c4b13E0e0d80a8/876c40f17d91ce44.png'>
         </tabbaritem>
       </tab-bar>

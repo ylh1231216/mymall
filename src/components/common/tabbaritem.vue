@@ -1,6 +1,6 @@
 <template>
- <div class ='tab_bar_items' @click="change()">
-  <div v-if="!isactive"><slot name="item_icon"></slot></div>
+ <div class ='tab_bar_items'>
+  <div v-if="!isactive"  @click="change()"><slot name="item_icon"></slot></div>
   <div v-else><slot name="item_icon_active"></slot></div>
   <div :style="activestyle"><slot name="item_text"></slot></div>
  </div>

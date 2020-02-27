@@ -23,7 +23,7 @@ export default {
 <style scoped>
 #tab_bar{
   display: flex;
-  background-color: #f6f6f6;
+  background-color:white;
   position:fixed;
   left: 0;
   right: 0;
